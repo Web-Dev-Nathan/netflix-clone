@@ -1,0 +1,20 @@
+.header{
+ height: 70px;
+}
+.nav-black{
+    background-color: #111;
+    opacity: 0.9;
+
+}
+
+.sign_button{
+    background-color: red;
+    color: white;
+    border-radius: 7px;
+    padding: 5px;
+    border: none;
+    font-weight: 700;
+}
+.sign_button:hover{
+    opacity:0.8;
+}

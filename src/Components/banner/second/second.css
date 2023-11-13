@@ -1,0 +1,33 @@
+.second-sec{
+    background-color: black;
+    height: 80vh;
+    border-top: 10px solid rgb(78, 78, 78);
+
+}
+.second-sec h1{
+    font-weight: 800;
+}
+.second-sec h5{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+.h3-title{
+    background-color: #2D2D2D;
+    cursor: pointer;
+}
+.h3-title:hover{
+    background-color: #414141;
+}
+.content-item{
+    background-color: #2D2D2D;
+   
+}
+.img{
+    position: absolute;
+    width: 300px;
+    height: 170px;
+    top: 70px;
+    right: 130px;
+}
+

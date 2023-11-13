@@ -1,0 +1,42 @@
+.row {
+  margin-left: 20px;
+  color: white;
+  
+}
+.row__poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 100px;
+  transition: transform 450ms;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+.row__poster:hover {
+  transform: scale(1.08);
+  /* opacity: 1.2; */
+}
+.row__posterLarge {
+  max-height: 250px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.09);
+  opacity: 1;
+}
+.video-player{
+  z-index: 9999;
+  background-color:rgba(0, 0, 0, 0.8);
+  margin: auto;
+}
+.youtube-video{
+  top: 100px;
+  left:230px
+}
