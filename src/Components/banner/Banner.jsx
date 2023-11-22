@@ -12,7 +12,7 @@ const Banner = () => {
         <div className="banner-fadeBottom w-100 banner-fadeBottom1 vh-100">
           <div className="text-center  w-100  text-white banner-text align-content-center ">
             <h1 className="my-4 container">
-              Unlimited movies, TV shows, and more
+             
             </h1>
             <h3>Watch anywhere. Cancel anytime.</h3>
             <Link to="/home">
