@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,Suspense } from "react";
 import axios from "./axios";
 import "./Row.css";
 import YouTube from "react-youtube"
@@ -10,16 +10,16 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerURL, setTrailerURL] = useState("");
-    const [loading, setLoading] = useState(false);
+    //const [loading, setLoading] = useState(false);
     const [display, setdisplay] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
-      setLoading(true);
+     // setLoading(true);
          const request = await axios.get(fetchUrl);
          setMovies(request.data.results);
        setTimeout( () => {
-       setLoading(false);
+       //setLoading(false);
       }, 5000);
      
     }
@@ -53,17 +53,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
   return (
     <>
-      {loading ? (
-        <div className=" d-flex justify-content-center align-content-center p-5">
-          {/* <div
-            class="spinner-border text-light spinner-border-sm m-5 p-5"
-            role="status"
-          >
-            <span class="visually-hidden">Loading...</span>
-          </div> */}
-        </div>
-      ) : (
-        <div className="row">
+    <Suspense fallback={
+    "<div>loading</div>"
+    }>
+     <div className="row">
           <h2>{title}</h2>
           <div className="row__posters">
             {movies?.map((movie) => (
@@ -91,7 +84,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
             </div>
           )}
         </div>
-      )}
+      
+    </Suspense>
     </>
   );
 }
