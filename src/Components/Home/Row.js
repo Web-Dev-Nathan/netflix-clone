@@ -54,7 +54,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   return (
     <>
     <Suspense fallback={
-    "<div>loading</div>"
+    "loading..."
     }>
      <div className="row">
           <h2>{title}</h2>
